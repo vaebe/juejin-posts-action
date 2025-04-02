@@ -2,6 +2,8 @@
 name: Render juejin Posts in Readme
 description: Render juejin Posts in Readme
 author: vaebe
+icon: activity
+color: black
 
 # 定义当前步骤参数
 inputs:
