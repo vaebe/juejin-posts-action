@@ -1,0 +1,45 @@
+{
+  "name": "@vaebe/juejin-posts-action",
+  "type": "commonjs",
+  "version": "0.0.1",
+  "description": "获取掘金文章在 README 文件中展示",
+  "author": "vaebe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vaebe/juejin-posts-action.git"
+  },
+  "keywords": [
+    "juejin",
+    "GitHub",
+    "Actions",
+    "readme post"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "README.md",
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "ncc build src/index.ts -m -o lib -C",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.11.0",
+    "@types/node": "^22.13.17",
+    "@vercel/ncc": "^0.38.3",
+    "eslint": "^9.23.0",
+    "eslint-plugin-format": "^1.0.1",
+    "typescript": "^5.8.2"
+  }
+}
