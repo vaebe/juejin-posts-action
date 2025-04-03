@@ -16,7 +16,7 @@ async function main(): Promise<void> {
     const reduceText = commonPosts
       .map(({ title, publish_time, link, star, collect }) => {
         const time = getTimeDiffString(publish_time);
-        return `[${title} 👍：${star} ${collect ? `⭐：${collect}` : ''}](${link}) ${time}`;
+        return `[${title}](${link}) (${time} 👍：${star} ${collect ? `⭐：${collect}` : ''})`;
       })
       .join('\n\n');
 
