@@ -1,0 +1,20 @@
+# see: https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
+name: Render juejin Posts in Readme
+description: Render juejin Posts in Readme
+author: vaebe
+
+branding:
+  icon: activity
+  color: black
+
+# 定义当前步骤参数
+inputs:
+  user_id:
+    description: 掘金平台用户 ID
+    required: true
+    default: ''
+
+# 向下一个步骤输出参数
+runs:
+  using: node20
+  main: dist/index.js
