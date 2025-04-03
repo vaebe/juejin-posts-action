@@ -17,4 +17,4 @@ inputs:
 # 向下一个步骤输出参数
 runs:
   using: node20
-  main: dist/index.js
+  main: dist/index.cjs
