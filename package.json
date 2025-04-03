@@ -2,6 +2,14 @@
   "name": "juejin-posts-action",
   "version": "1.0.0",
   "type": "module",
+  "description": "获取掘金文章在 README 文件中展示",
+  "author": "vaebe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vaebe/juejin-posts-action.git"
+  },
+  "keywords": ["juejin", "GitHub", "Actions", "readme post"],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -10,9 +18,7 @@
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["README.md", "dist", "package.json"],
   "scripts": {
     "build": "rslib build",
     "check": "biome check --write",
@@ -27,6 +33,5 @@
     "@types/node": "^22.8.1",
     "typescript": "^5.8.2",
     "vitest": "^3.0.9"
-  },
-  "private": true
+  }
 }
